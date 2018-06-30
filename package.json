@@ -1,0 +1,17 @@
+{
+  "name": "rcsmm-feed",
+  "version": "0.0.1",
+  "description": "Scrapes the RCSMM website and outputs an Atom feed",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roberto MF (Roboe)",
+  "license": "MIT",
+  "dependencies": {
+    "feed": "^1.1.1",
+    "jsdom": "^11.11.0",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
