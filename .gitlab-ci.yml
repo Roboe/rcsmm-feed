@@ -1,0 +1,21 @@
+image: node:alpine
+
+variables:
+  FEED_FILE: atom.xml
+
+pages:
+  only:
+    - master
+  before_script:
+    - npm install
+  script:
+    - npm start
+    - mkdir --parents public
+    - mv "$FEED_FILE" public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+  cache:
+    paths:
+      - node_modules/
